@@ -37,3 +37,11 @@ function showTask(){
     listContainer.innerHTML= localStorage.getItem("data");
 }
 showTask();
+
+//new tutorial to allow button action when "Enter" button is hit
+let inputEl = document.querySelector("input")
+let btnEl = document.querySelector("button");
+
+inputEl.addEventListener("keypress",(e) => {
+    if (e.key == "Enter") btnEl.click();
+})
